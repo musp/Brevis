@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<acoes>
+  <Selecao>SELECT * FROM ESQUEMA.TABELA WHERE 1=1 CLAUSULAS</Selecao>
+  <Alteracao>UPDATE ESQUEMA.TABELA SET COLUNASDADOS WHERE 1=1 CLAUSULAS</Alteracao>
+  <Adicao>INSERT INTO ESQUEMA.TABELA (COLUNAS) VALUES (DADOS) SELECT SCOPE_IDENTITY() as Id</Adicao>
+  <RemocaoFisica>DELETE FROM ESQUEMA.TABELA WHERE 1=1 CLAUSULAS</RemocaoFisica>
+  <RemocaoLogica>UPDATE ESQUEMA.TABELA SET COLUNASDADOS WHERE 1=1 CLAUSULAS</RemocaoLogica>
+  <SelecaoComJuncao>SELECT * FROM ESQUEMA.TABELA JUNCAO WHERE 1=1 CLAUSULAS</SelecaoComJuncao>
+  <Juncao>ESQUEMA.TABELA ON (ColunasJuncao)</Juncao>
+  <ColunasJuncao>COLUNA0 = COLUNA1</ColunasJuncao>
+</acoes>
