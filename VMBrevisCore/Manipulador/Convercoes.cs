@@ -497,7 +497,7 @@ namespace VMBrevisCore.Manipulador
             else if (object.Equals(tipo, typeof(DBNull)) && typeof(double) == campo.FieldType)
                 return 0d;
             else if (campo.FieldType == typeof(Nullable<bool>))
-                return new Boolean();
+                return null;
             else if (campo.FieldType == typeof(Byte[]))
                 return null;
             else if (campo.FieldType == typeof(Nullable<Int64>) || campo.FieldType == typeof(Nullable<Int32>))

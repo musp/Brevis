@@ -24,11 +24,11 @@ namespace VMBrevisCore.Gerenciador
             {
                 List<SqlParameter> parametros = MontaParametros(dados, Operacao.Carregar);
 
-                //var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
-                var conecoes = XElement.Load(@"K:\ProjetoEventosViraMundo\ProjetoEventoViraMundo\VMBrevisCore\ConecoesLocal.xml");
+                var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
+                //var conecoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Conecoes.xml");
                 string stringDeConexaoCorrente = conecoes.XPathSelectElement(RetornaConexao(conexao).ToString()).Value;
-                var acoes = XElement.Load(@"K:\ProjetoEventosViraMundo\ProjetoEventoViraMundo\VMBrevisCore\\Acoes.xml");
-                //var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
+                //var acoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Acoes.xml");
+                var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
 
                 string acao = acoes.XPathSelectElement("Selecao").Value;
                 AbreConexao(new DadosConexao() { nome = stringDeConexaoCorrente, stringDeConexao = stringDeConexaoCorrente });
@@ -55,12 +55,12 @@ namespace VMBrevisCore.Gerenciador
             {
                 List<SqlParameter> parametros = MontaParametros(dados, Operacao.Carregar);
 
-                //var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
-                var conecoes = XElement.Load(@"K:\ProjetoEventosViraMundo\ProjetoEventoViraMundo\VMBrevisCore\ConecoesLocal.xml");
+                var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
+                //var conecoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Conecoes.xml");
 
                 string stringDeConexaoCorrente = conecoes.XPathSelectElement(RetornaConexao(conexao).ToString()).Value;
-                //var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
-                var acoes = XElement.Load(@"K:\ProjetoEventosViraMundo\ProjetoEventoViraMundo\VMBrevisCore\Acoes.xml");
+                var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
+                //var acoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Acoes.xml");
                 string acao = acoes.XPathSelectElement("SelecaoComJuncao").Value;
                 AbreConexao(new DadosConexao() { nome = "", stringDeConexao = stringDeConexaoCorrente });
                 acao = acao
@@ -69,7 +69,7 @@ namespace VMBrevisCore.Gerenciador
                     .Replace("CLAUSULAS", parametros.Where(s => s.ParameterName == "Parametros").FirstOrDefault().Value.ToString());
                 return ConverteDeSqlListaDataReaderParaT<T>(CarregaDadosGenericoT<T>(acao.Replace("JUNCAO", "")));
             }
-            catch
+            catch (Exception ex)
             {
                 throw;
             }
@@ -83,11 +83,11 @@ namespace VMBrevisCore.Gerenciador
             try
             {
                 List<SqlParameter> parametros = MontaParametros(dados, Operacao.CarregarTodos);
-                //var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
-                var conecoes = XElement.Load(@"K:\ProjetoEventosViraMundo\ProjetoEventoViraMundo\VMBrevisCore\ConecoesLocal.xml");
+                var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
+                //var conecoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Conecoes.xml");
                 string stringDeConexaoCorrente = conecoes.XPathSelectElement(RetornaConexao(conexao).ToString()).Value;
-                //var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
-                var acoes = XElement.Load(@"K:\ProjetoEventosViraMundo\ProjetoEventoViraMundo\VMBrevisCore\Acoes.xml");
+                var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
+                //var acoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Acoes.xml");
                 string acao = acoes.XPathSelectElement("SelecaoComJuncao").Value;
                 AbreConexao(new DadosConexao() { nome = "", stringDeConexao = stringDeConexaoCorrente });
                 acao = acao
@@ -110,11 +110,11 @@ namespace VMBrevisCore.Gerenciador
             try
             {
                 List<SqlParameter> parametros = MontaParametros(dado, Operacao.UltimoId);
-                //var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
-                var conecoes = XElement.Load(@"K:\ProjetoEventosViraMundo\ProjetoEventoViraMundo\VMBrevisCore\ConecoesLocal.xml");
+                var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
+                //var conecoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Conecoes.xml");
                 string stringDeConexaoCorrente = conecoes.XPathSelectElement(RetornaConexao(conexao).ToString()).Value;
-                //var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
-                var acoes = XElement.Load(@"K:\ProjetoEventosViraMundo\ProjetoEventoViraMundo\VMBrevisCore\Acoes.xml");
+                var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
+                //var acoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Acoes.xml");
                 AbreConexao(new DadosConexao() { nome = "", stringDeConexao = stringDeConexaoCorrente });
                 return ConverteDeSqlListaDataReaderParaT<T>(CarregaDadosGenericoT<T>("SELECT top 1 * FROM " 
                     + parametros.Where(s => s.ParameterName.Contains("esquema")).FirstOrDefault().Value.ToString() + "." 

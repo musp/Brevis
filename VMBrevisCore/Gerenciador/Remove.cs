@@ -22,10 +22,9 @@ namespace VMBrevisCore.Gerenciador
         {
             List<SqlParameter> parametros = MontaParametros(objeto, Operacao.Alterar);
             var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
-            //var conecoes = XElement.Load(@"K:\ProjetoEventosViraMundo\ProjetoEventoViraMundo\VMBrevisCore\ConecoesLocal.xml");
-            //            //var conecoes = XElement.Load(new StringReader(@"<conexoes><ViraMundoDistribuidor>Data Source=DESKTOP-215201P;Initial Catalog=VMDistribuidor;Persist Security Info=True;User ID=sa;Password=keycode</ViraMundoDistribuidor>
+            //var conecoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Conecoes.xml");
             string stringDeConexaoCorrente = conecoes.XPathSelectElement(RetornaConexao(conexao).ToString()).Value;
-            //var acoes = XElement.Load(@"K:\ProjetoEventosViraMundo\ProjetoEventoViraMundo\VMBrevisCore\Acoes.xml");
+            //var acoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Acoes.xml");
             var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
             string acao = acoes.XPathSelectElement("RemocaoFisica").Value;
             AbreConexao(new DadosConexao() { nome = stringDeConexaoCorrente, stringDeConexao = stringDeConexaoCorrente });
