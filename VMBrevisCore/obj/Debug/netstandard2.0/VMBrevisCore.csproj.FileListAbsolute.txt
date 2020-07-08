@@ -7,3 +7,11 @@ K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\obj\Debug\netstandard
 K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\obj\Debug\netstandard2.0\VMBrevisCore.dll
 K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\obj\Debug\netstandard2.0\VMBrevisCore.pdb
 K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\obj\Debug\netstandard2.0\VMBrevisCore.csprojAssemblyReference.cache
+I:\MEU\VMBrevis\VMBrevisCore\bin\Debug\netstandard2.0\VMBrevisCore.deps.json
+I:\MEU\VMBrevis\VMBrevisCore\bin\Debug\netstandard2.0\VMBrevisCore.dll
+I:\MEU\VMBrevis\VMBrevisCore\bin\Debug\netstandard2.0\VMBrevisCore.pdb
+I:\MEU\VMBrevis\VMBrevisCore\obj\Debug\netstandard2.0\VMBrevisCore.AssemblyInfoInputs.cache
+I:\MEU\VMBrevis\VMBrevisCore\obj\Debug\netstandard2.0\VMBrevisCore.AssemblyInfo.cs
+I:\MEU\VMBrevis\VMBrevisCore\obj\Debug\netstandard2.0\VMBrevisCore.csproj.CoreCompileInputs.cache
+I:\MEU\VMBrevis\VMBrevisCore\obj\Debug\netstandard2.0\VMBrevisCore.dll
+I:\MEU\VMBrevis\VMBrevisCore\obj\Debug\netstandard2.0\VMBrevisCore.pdb

@@ -12,11 +12,11 @@ namespace VMBrevisCore.Gerenciador
         public T IncluiT<T>(T objeto, int conexao)
         {
             List<SqlParameter> parametros = MontaParametros(objeto, Operacao.Inserir);
-            var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
-            //var conecoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Conecoes.xml");
+            //var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
+            var conecoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Conecoes.xml");
             string stringDeConexaoCorrente = conecoes.XPathSelectElement(RetornaConexao(conexao).ToString()).Value;
-            //var acoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Acoes.xml");
-            var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
+            var acoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Acoes.xml");
+            //var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
             string acao = acoes.XPathSelectElement("Adicao").Value;
             AbreConexao(new DadosConexao() { nome = stringDeConexaoCorrente, stringDeConexao = stringDeConexaoCorrente });
             string comando = acao
