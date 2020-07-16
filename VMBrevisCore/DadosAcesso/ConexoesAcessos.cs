@@ -12,7 +12,8 @@ namespace VMBrevisCore.DadosAcesso
         ViraMundoSocial = 6,
         ViraMundoValidacao = 7,
         ViraMundoLojaVirtual = 8,
-        ViraMundoEventos = 9
+        ViraMundoEventos = 9,
+        ViraMundoGeradorDeTela = 10
     }
 
     enum Esquemas

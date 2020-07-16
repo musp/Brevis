@@ -22,9 +22,9 @@ namespace VMBrevisCore.Gerenciador
         {
             List<SqlParameter> parametros = MontaParametros(objeto, Operacao.Alterar);
             //var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
-            var conecoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Conecoes.xml");
+            var conecoes = XElement.Load(@"I:\MEU\VMBrevis\VMBrevisCore\ConecoesLocal.xml");
             string stringDeConexaoCorrente = conecoes.XPathSelectElement(RetornaConexao(conexao).ToString()).Value;
-            var acoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Acoes.xml");
+            var acoes = XElement.Load(@"I:\MEU\VMBrevis\VMBrevisCore\Acoes.xml");
             //var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
             string acao = acoes.XPathSelectElement("RemocaoFisica").Value;
             AbreConexao(new DadosConexao() { nome = stringDeConexaoCorrente, stringDeConexao = stringDeConexaoCorrente });

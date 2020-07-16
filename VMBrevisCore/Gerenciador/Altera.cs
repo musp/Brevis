@@ -19,10 +19,10 @@ namespace VMBrevisCore.Gerenciador
         public T AlteraT<T>(T objeto, int conexao)
         {   
             List<SqlParameter> parametros = MontaParametros(objeto, Operacao.Alterar);
-            var conecoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Conecoes.xml");
+            var conecoes = XElement.Load(@"I:\MEU\VMBrevis\VMBrevisCore\ConecoesLocal.xml");
             //var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
             string stringDeConexaoCorrente = conecoes.XPathSelectElement(RetornaConexao(conexao).ToString()).Value;
-            var acoes = XElement.Load(@"K:\ViraMundo\eventosvm\ProjetoEventoViraMundo\VMBrevisCore\Acoes.xml");
+            var acoes = XElement.Load(@"I:\MEU\VMBrevis\VMBrevisCore\Acoes.xml");
             //var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
             string acao = acoes.XPathSelectElement("Alteracao").Value;
             AbreConexao(new DadosConexao() { nome = stringDeConexaoCorrente, stringDeConexao = stringDeConexaoCorrente });

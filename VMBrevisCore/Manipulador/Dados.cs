@@ -125,6 +125,7 @@ namespace VMBrevisCore.Manipulador
                 case 7: return ConexoesAcessos.ViraMundoValidacao.ToString();
                 case 8: return ConexoesAcessos.ViraMundoLojaVirtual.ToString();
                 case 9: return ConexoesAcessos.ViraMundoEventos.ToString();
+                case 10: return ConexoesAcessos.ViraMundoGeradorDeTela.ToString();
                 default: return "";
             }
         }
