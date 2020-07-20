@@ -21,11 +21,11 @@ namespace VMBrevisCore.Gerenciador
         public T RemoveT<T>(T objeto, int conexao)
         {
             List<SqlParameter> parametros = MontaParametros(objeto, Operacao.Alterar);
-            //var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
-            var conecoes = XElement.Load(@"I:\MEU\VMBrevis\VMBrevisCore\ConecoesLocal.xml");
+            var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
+            //var conecoes = XElement.Load(@"I:\MEU\VMBrevis\VMBrevisCore\ConecoesLocal.xml");
             string stringDeConexaoCorrente = conecoes.XPathSelectElement(RetornaConexao(conexao).ToString()).Value;
-            var acoes = XElement.Load(@"I:\MEU\VMBrevis\VMBrevisCore\Acoes.xml");
-            //var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
+            //var acoes = XElement.Load(@"I:\MEU\VMBrevis\VMBrevisCore\Acoes.xml");
+            var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
             string acao = acoes.XPathSelectElement("RemocaoFisica").Value;
             AbreConexao(new DadosConexao() { nome = stringDeConexaoCorrente, stringDeConexao = stringDeConexaoCorrente });
             string comando = acao
