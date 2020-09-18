@@ -8,7 +8,7 @@ Comunicação com o banco de dados via classe com facilidade e clareza, além de
 Criado para atender a demanda de migração de software para tecnologias novas.
 
 O que gerou esta demanda:
-Ao decorrer do tempo foi visto que existem inúmeras formas de consumir dados em inúmeras empresas, como em vários os casos se trata de empresas que geram portfólio em cima de suas soluções isso gera um legado que muitas vezes não tem compatibilidade e pontos de rastreio de código, este projeto tem o foco de tornar prático o conceito de classe entidade e da segurança de não utilizar código sql em código codificação C#.
+Ao decorrer do tempo foi visto que existem inúmeras formas de consumir dados em inúmeras empresas, como em vários os casos se trata de empresas que geram portfólio em cima de suas soluções isso gera um legado que muitas vezes não tem compatibilidade e pontos de rastreio de código, este projeto tem o foco de tornar prático o conceito de classe entidade e da segurança de não utilizar código sql em codificação C#.
 A integração entre equipes e pessoas tornasse obrigatório, porque gera dependência, tornando as entregas mais assertivas.
 
 Bonus:
