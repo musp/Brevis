@@ -1,4 +1,8 @@
 VMBrevisCore
+
+NugetPackage
+Install-Package VMBrevisCore -Version 1.2.0
+
 DLL para comunicação á banco de dados pertencente a musp
 
 originario do projeto Brevis-data-manager
@@ -103,12 +107,14 @@ namespace XXXXX
 {
     public class BancoDeDados
     {
-       internal Busca busca = new Busca();
-       internal Inclui inclui = new Inclui();
-       internal Altera altera = new Altera();
-       internal Remove remove = new Remove();
+       internal Busca busca = new Busca("Caminho do XML");
+       internal Inclui inclui = new Inclui("Caminho do XML");
+       internal Altera altera = new Altera("Caminho do XML");
+       internal Remove remove = new Remove("Caminho do XML");
     }
 }
+
+
 
  public class EmpresaNegocio : BancoDeDados
 {
@@ -116,5 +122,30 @@ namespace XXXXX
     { return inclui.IncluiT<Usuario>(objetoUsuario, 3);}
 }
      
+XLMs
+Pelo amor de Deus configure o Xml do banco
 
+Nome do XML de conexão é "Conexoes"
+<?xml version="1.0" encoding="utf-8" ?>
+<conexoes>
+	<NomeDoBanco1>(Ex. ConnectionStringDoBanco)</NomeDoBanco1>
+    <NomeDoBanco2>Data Source=VIRAMUNDO;Initial Catalog=Odata;User ID=sa;Password=123</NomeDoBanco2>
+    ...N.....
+</conexoes>
 
+Nome do XML ações do banco é "Acoes"
+inícialmente configurado com este código......
+
+<?xml version="1.0" encoding="utf-8" ?>
+<acoes>
+  <Selecao>SELECT * FROM ESQUEMA.TABELA WHERE 1=1 CLAUSULAS</Selecao>
+  <Alteracao>UPDATE ESQUEMA.TABELA SET COLUNASDADOS WHERE 1=1 CLAUSULAS</Alteracao>
+  <Adicao>INSERT INTO ESQUEMA.TABELA (COLUNAS) VALUES (DADOS) SELECT SCOPE_IDENTITY() as Id</Adicao>
+  <RemocaoFisica>DELETE FROM ESQUEMA.TABELA WHERE 1=1 CLAUSULAS</RemocaoFisica>
+  <RemocaoLogica>UPDATE ESQUEMA.TABELA SET COLUNASDADOS WHERE 1=1 CLAUSULAS</RemocaoLogica>
+  <SelecaoComJuncao>SELECT * FROM ESQUEMA.TABELA JUNCAO WHERE 1=1 CLAUSULAS</SelecaoComJuncao>
+  <Juncao>ESQUEMA.TABELA ON (ColunasJuncao)</Juncao>
+  <ColunasJuncao>COLUNA0 = COLUNA1</ColunasJuncao>
+</acoes>
+
+Este script é padrão, alterações? testa aí rs.....
