@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.Data.SqlClient;
 using System.Linq;
 using System.Xml.Linq;
@@ -10,6 +9,11 @@ namespace VMBrevisCore.Gerenciador
 {
     public class Remove : Dados
     {
+        string caminhoBanco = "";
+        public Remove(string caminho)
+        {
+            caminhoBanco = caminho;
+        }
         /// <summary>
         /// Remoção de dados conforme parametros, cuidado é sempre bom na hora da remoção de infomações.
         /// 
@@ -21,11 +25,23 @@ namespace VMBrevisCore.Gerenciador
         public T RemoveT<T>(T objeto, int conexao)
         {
             List<SqlParameter> parametros = MontaParametros(objeto, Operacao.Alterar);
-            var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
-            //var conecoes = XElement.Load(@"I:\MEU\VMBrevis\VMBrevisCore\ConecoesLocal.xml");
-            string stringDeConexaoCorrente = conecoes.XPathSelectElement(RetornaConexao(conexao).ToString()).Value;
-            //var acoes = XElement.Load(@"I:\MEU\VMBrevis\VMBrevisCore\Acoes.xml");
-            var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
+            //var conexoes = XElement.Load(@"D:\home\site\wwwroot\conexoes.xml");
+            var conexoes = XElement.Load(@caminhoBanco + @"\conexoesLocal.xml");
+            string stringDeConexaoCorrente = "";//conexoes.XPathSelectElement(RetornaConexao(conexao).ToString()).Value;
+            XNode noCorrente = conexoes.FirstNode;
+            for (int indice = 1; indice <= conexao; indice++)
+            {
+                if (indice == conexao)
+                {
+                    stringDeConexaoCorrente = ((System.Xml.Linq.XElement)noCorrente).Value.ToString();
+                    break;
+                }
+                noCorrente = noCorrente.NextNode;
+                if (noCorrente.ToString().Equals(string.Empty))
+                    break;
+            }
+            //var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
+            var acoes = XElement.Load(@caminhoBanco + @"\Acoes.xml");
             string acao = acoes.XPathSelectElement("RemocaoFisica").Value;
             AbreConexao(new DadosConexao() { nome = stringDeConexaoCorrente, stringDeConexao = stringDeConexaoCorrente });
             string comando = acao

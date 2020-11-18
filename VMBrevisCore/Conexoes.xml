@@ -6,4 +6,5 @@
 	<ViraMundoLojaVirtual>Data Source=VIRAMUNDO;Initial Catalog=VMLojaVirtual;Persist Security Info=True;User ID=sa;Password=keycode</ViraMundoLojaVirtual>
 	<ViraMundoEventos>Data Source=VIRAMUNDO;Initial Catalog=VMEventos;User ID=sa;Password=keycode</ViraMundoEventos>
   <ViraMundoGeradorDeTela>Data Source=VIRAMUNDO;Initial Catalog=VMGeradorDeTela;User ID=sa;Password=keycode</ViraMundoGeradorDeTela>
+  <ViraMundoOdata>Data Source=VIRAMUNDO;Initial Catalog=Odata;User ID=sa;Password=keycode</ViraMundoOdata>
 </conexoes>

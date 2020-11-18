@@ -9,6 +9,11 @@ namespace VMBrevisCore.Gerenciador
 {
     public class Altera : Dados
     {
+        string caminhoBanco = "";
+        public Altera(string caminho)
+        {
+            caminhoBanco = caminho;
+        }
         /// <summary> @ Propriedade ViraMundo
         /// Altera dados do banco comforme parametrizacao
         /// </summary>
@@ -19,11 +24,23 @@ namespace VMBrevisCore.Gerenciador
         public T AlteraT<T>(T objeto, int conexao)
         {   
             List<SqlParameter> parametros = MontaParametros(objeto, Operacao.Alterar);
-            //var conecoes = XElement.Load(@"I:\MEU\VMBrevis\VMBrevisCore\ConecoesLocal.xml");
-            var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
-            string stringDeConexaoCorrente = conecoes.XPathSelectElement(RetornaConexao(conexao).ToString()).Value;
-            //var acoes = XElement.Load(@"I:\MEU\VMBrevis\VMBrevisCore\Acoes.xml");
-            var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
+            //var conexoes = XElement.Load(@"D:\home\site\wwwroot\conexoes.xml");
+            var conexoes = XElement.Load(@caminhoBanco + @"\conexoes.xml");
+            string stringDeConexaoCorrente = "";//conexoes.XPathSelectElement(RetornaConexao(conexao).ToString()).Value;
+            XNode noCorrente = conexoes.FirstNode;
+            for (int indice = 1; indice <= conexao; indice++)
+            {
+                if (indice == conexao)
+                {
+                    stringDeConexaoCorrente = ((System.Xml.Linq.XElement)noCorrente).Value.ToString();
+                    break;
+                }
+                noCorrente = noCorrente.NextNode;
+                if (noCorrente.ToString().Equals(string.Empty))
+                    break;
+            }
+            //var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
+            var acoes = XElement.Load(@caminhoBanco + @"\acoes.xml");
             string acao = acoes.XPathSelectElement("Alteracao").Value;
             AbreConexao(new DadosConexao() { nome = stringDeConexaoCorrente, stringDeConexao = stringDeConexaoCorrente });
              string comando = acao

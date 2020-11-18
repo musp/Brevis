@@ -13,7 +13,7 @@ namespace VMBrevisCore.Manipulador
 
     public abstract class Banco : Convercoes
     {
-        private SqlTransaction transacao;
+        //private SqlTransaction transacao;
         private SqlCommand comandoSql;
 
         public Banco()

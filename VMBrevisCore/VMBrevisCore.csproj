@@ -2,10 +2,41 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>1</PackageReleaseNotes>
+    <NeutralLanguage>pt-BR</NeutralLanguage>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
+    <Copyright>Maurício Urubatan da Silva Pacheco ViraMundo</Copyright>
+    <Description>Esta classe deve passar o caminho dos dois xmls, que devem ser criados da seguinte forma:
+Nomeado Cone
+
+using VMBrevisCore.Gerenciador;
+namespace odataNegocio
+{
+    public class BancoDeDados
+    {
+        internal Busca busca = new Busca(@"I:\MEU\VMBrevis\VMBrevisCore");
+        internal Inclui inclui = new Inclui(@"I:\MEU\VMBrevis\VMBrevisCore");
+        internal Altera altera = new Altera(@"I:\MEU\VMBrevis\VMBrevisCore");
+        internal Remove remove = new Remove(@"I:\MEU\VMBrevis\VMBrevisCore");
+    }
+}</Description>
+    <UserSecretsId>66bd1305-860f-4eec-a3f1-bbdda4b5f8b5</UserSecretsId>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.SqlClient" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="license\license.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

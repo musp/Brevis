@@ -1,0 +1,16 @@
+﻿﻿Apache License
+
+Version 2.0, January 2004
+
+http://www.apache.org/licenses/
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+1. Definições.
+
+Manutenção de classe para Banco de dados
+
+2. Código aberto. Git.
+
+é permitido o uso para fins benéficos a humanidade
+END OF TERMS AND CONDITIONS

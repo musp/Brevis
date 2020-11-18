@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>VMBrevisCore</id>
+    <version>1.0.0</version>
+    <authors>VMBrevisCore</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">license.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <description>Esta classe deve passar o caminho dos dois xmls, que devem ser criados da seguinte forma:
+Nomeado Cone
+
+using VMBrevisCore.Gerenciador;
+namespace odataNegocio
+{
+    public class BancoDeDados
+    {
+        internal Busca busca = new Busca(@"I:\MEU\VMBrevis\VMBrevisCore");
+        internal Inclui inclui = new Inclui(@"I:\MEU\VMBrevis\VMBrevisCore");
+        internal Altera altera = new Altera(@"I:\MEU\VMBrevis\VMBrevisCore");
+        internal Remove remove = new Remove(@"I:\MEU\VMBrevis\VMBrevisCore");
+    }
+}</description>
+    <releaseNotes>1</releaseNotes>
+    <copyright>Maurício Urubatan da Silva Pacheco ViraMundo</copyright>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Microsoft.Data.SqlClient" version="2.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="I:\MEU\VMBrevis\VMBrevisCore\bin\Release\netstandard2.0\VMBrevisCore.dll" target="lib\netstandard2.0\VMBrevisCore.dll" />
+    <file src="I:\MEU\VMBrevis\VMBrevisCore\license\license.txt" target="license.txt" />
+  </files>
+</package>

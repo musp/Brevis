@@ -9,14 +9,31 @@ namespace VMBrevisCore.Gerenciador
 {
     public class Inclui : Dados
     {
+        string caminhoBanco = "";
+        public Inclui(string caminho)
+        {
+            caminhoBanco = caminho;
+        }
         public T IncluiT<T>(T objeto, int conexao)
         {
             List<SqlParameter> parametros = MontaParametros(objeto, Operacao.Inserir);
-            var conecoes = XElement.Load(@"D:\home\site\wwwroot\Conecoes.xml");
-            //var conecoes = XElement.Load(@"I:\MEU\VMBrevis\VMBrevisCore\ConecoesLocal.xml");
-            string stringDeConexaoCorrente = conecoes.XPathSelectElement(RetornaConexao(conexao).ToString()).Value;
-            //var acoes = XElement.Load(@"I:\MEU\VMBrevis\VMBrevisCore\Acoes.xml");
-            var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
+            //var conexoes = XElement.Load(@"D:\home\site\wwwroot\conexoes.xml");
+            XElement conexoes = XElement.Load(@caminhoBanco+ @"\conexoes.xml");
+            string stringDeConexaoCorrente = "";//conexoes.XPathSelectElement(RetornaConexao(conexao).ToString()).Value;
+            XNode noCorrente = conexoes.FirstNode;
+            for (int indice = 1; indice <= conexao; indice++)
+            {
+                if (indice == conexao)
+                {
+                    stringDeConexaoCorrente = ((System.Xml.Linq.XElement)noCorrente).Value.ToString();
+                    break;
+                }
+                noCorrente = noCorrente.NextNode;
+                if (noCorrente.ToString().Equals(string.Empty))
+                    break;
+            }
+            //var acoes = XElement.Load(@"D:\home\site\wwwroot\Acoes.xml");
+            XElement acoes = XElement.Load(@caminhoBanco +@"\acoes.xml");
             string acao = acoes.XPathSelectElement("Adicao").Value;
             AbreConexao(new DadosConexao() { nome = stringDeConexaoCorrente, stringDeConexao = stringDeConexaoCorrente });
             string comando = acao

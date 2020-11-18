@@ -485,7 +485,7 @@ namespace VMBrevisCore.Manipulador
             else if (object.Equals(tipo, typeof(DBNull)) && (campo.Name.Contains("fl_") || campo.Name.Contains("st_")))
                 return false;
             else if (object.Equals(tipo, typeof(DBNull)) && (campo.ToString().Contains(typeof(DateTime).FullName)))
-                return new DateTime();
+                return null;
             else if (object.Equals(tipo, typeof(DBNull)) && (campo.ToString().Contains(typeof(TimeSpan).FullName)))
                 return new TimeSpan();
             else if (!object.Equals(tipo, typeof(DBNull)) && object.Equals(tipo, typeof(byte[])) && (campo.ToString().Contains("ob_")))

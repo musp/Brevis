@@ -13,19 +13,8 @@ namespace VMBrevisCore.DadosAcesso
         ViraMundoValidacao = 7,
         ViraMundoLojaVirtual = 8,
         ViraMundoEventos = 9,
-        ViraMundoGeradorDeTela = 10
-    }
-
-    enum Esquemas
-    {
-        [Description("Esquema pricipal")]
-        dbo = 1,
-        VMP = 2
-    }
-    enum AcessoProcedure
-    {
-        [Description("@PRC_")]
-        prc = 1
+        ViraMundoGeradorDeTela = 10,
+        ViraMundoOdata = 11
     }
     enum acao
     {
