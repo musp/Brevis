@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <conexoes>
-	<ViraMundoDistribuidor>Data Source=VIRAMUNDO;Initial Catalog=VMDistribuidor;Persist Security Info=True;User ID=sa;Password=keycode</ViraMundoDistribuidor>
-	<ViraMundoLogin>Data Source=VIRAMUNDO;Initial Catalog=VMSLogin;Persist Security Info=True;User ID=sa;Password=keycode</ViraMundoLogin>
-	<ViraMundoValidacao>Data Source=VIRAMUNDO;Initial Catalog=VMValidacao;Persist Security Info=True;User ID=sa;Password=keycode</ViraMundoValidacao>
-	<ViraMundoLojaVirtual>Data Source=VIRAMUNDO;Initial Catalog=VMLojaVirtual;Persist Security Info=True;User ID=sa;Password=keycode</ViraMundoLojaVirtual>
-	<ViraMundoEventos>Data Source=VIRAMUNDO;Initial Catalog=VMEventos;User ID=sa;Password=keycode</ViraMundoEventos>
-  <ViraMundoGeradorDeTela>Data Source=VIRAMUNDO;Initial Catalog=VMGeradorDeTela;User ID=sa;Password=keycode</ViraMundoGeradorDeTela>
-  <ViraMundoOdata>Data Source=VIRAMUNDO;Initial Catalog=Odata;User ID=sa;Password=keycode</ViraMundoOdata>
+	<ViraMundoDistribuidor>Data Source=VIRAMUNDO;Initial Catalog=VMDistribuidor;Persist Security Info=True;User ID=sa;Password=XXXX</ViraMundoDistribuidor>
+	<ViraMundoLogin>Data Source=VIRAMUNDO;Initial Catalog=VMSLogin;Persist Security Info=True;User ID=sa;Password=XXXXX</ViraMundoLogin>
+	
 </conexoes>
