@@ -148,6 +148,4 @@ inícialmente configurado com este código......
   <ColunasJuncao>COLUNA0 = COLUNA1</ColunasJuncao>
 </acoes>
 
-Este script é padrão, alterações? testa aí rs.....
-
-TeAmo.
+Este script é padrão, alterações
