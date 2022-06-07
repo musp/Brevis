@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <conexoes>
-  <ViraMundoDistribuidor>Data Source=DESKTOP-215201P;Initial Catalog=VMDistribuidor;Persist Security Info=True;User ID=sa;Password=keycode</ViraMundoDistribuidor>
-  <ViraMundoFollowDocs>Data Source=DESKTOP-215201P;Initial Catalog=VMFWD;Persist Security Info=True;User ID=sa;Password=keycode</ViraMundoFollowDocs>
-  <ViraMundoLogin>Data Source=viramundodb.database.windows.net;Initial Catalog=VMLogin;User ID=musp;Password=Keycode@9062</ViraMundoLogin>
-  <ViraMundoValidacao>Data Source=viramundodb.database.windows.net;Initial Catalog=VMValidacao;User ID=musp;Password=Keycode@9062</ViraMundoValidacao>
-  <ViraMundoEventos>Data Source=viramundodb.database.windows.net;Initial Catalog=VMEventos;User ID=musp;Password=Keycode@9062</ViraMundoEventos>
+  <ViraMundoDistribuidor>Data Source=DESKTOP-215201sss;Initial Catalog=VMDistribuidor;Persist Security Info=True;User ID=xx;Password=XXXX</ViraMundoDistribuidor>
+  <ViraMundoFollowDocs>Data Source=DESKTOP-215201sss;Initial Catalog=VMFWD;Persist Security Info=True;User ID=XX;Password=XXXXXx</ViraMundoFollowDocs>
 </conexoes>
