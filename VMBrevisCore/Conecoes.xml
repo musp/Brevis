@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<conexoes>
-  <ViraMundoDistribuidor>Data Source=DESKTOP-215201sss;Initial Catalog=VMDistribuidor;Persist Security Info=True;User ID=xx;Password=XXXX</ViraMundoDistribuidor>
-  <ViraMundoFollowDocs>Data Source=DESKTOP-215201sss;Initial Catalog=VMFWD;Persist Security Info=True;User ID=XX;Password=XXXXXx</ViraMundoFollowDocs>
-</conexoes>
