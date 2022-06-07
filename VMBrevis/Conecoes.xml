@@ -2,11 +2,5 @@
 <conexoes>
   <ViraMundoBrevis></ViraMundoBrevis>
   <ViraMundoCertificadoCNJ></ViraMundoCertificadoCNJ>
-  <ViraMundoDistribuidor>Data Source=DESKTOP-215201P;Initial Catalog=VMDistribuidor;Persist Security Info=True;User ID=sa;Password=keycode</ViraMundoDistribuidor>
-  <ViraMundoFollowDocs>Data Source=DESKTOP-215201P;Initial Catalog=VMFWD;Persist Security Info=True;User ID=sa;Password=keycode</ViraMundoFollowDocs>
-  <ViraMundoLogin>Data Source=DESKTOP-215201P;Initial Catalog=VMSLogin;Persist Security Info=True;User ID=sa;Password=keycode</ViraMundoLogin>
-  <ViraMundoSocial>Data Source=DESKTOP-215201P;Initial Catalog=VMSocial;Persist Security Info=True;User ID=sa;Password=keycode</ViraMundoSocial>
-  <ViraMundoValidacao>Data Source=DESKTOP-215201P;Initial Catalog=VMValidacao;Persist Security Info=True;User ID=sa;Password=keycode</ViraMundoValidacao>
-  <ViraMundoLojaVirtual>Data Source=DESKTOP-215201P;Initial Catalog=VMLojaVirtual;Persist Security Info=True;User ID=sa;Password=keycode</ViraMundoLojaVirtual>
-  <ViraMundoEventos>Data Source=DESKTOP-215201P;Initial Catalog=VMSocial;Persist Security Info=True;User ID=sa;Password=keycode</ViraMundoEventos>
+  
 </conexoes>
